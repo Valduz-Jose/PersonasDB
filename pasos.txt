@@ -1,0 +1,23 @@
+lo primero es crear la carpeta y una vez dentro descargar el concetor MySQL a python
+
+1 - terminal:
+python -m pip install mysql-connector-python
+
+2 - Luego importar la conexion (import mysql.connector)
+
+3 - Conectar a la base de datos
+personas_db = mysql.connector.connect(
+    host = 'localhost',#127.0.0.1
+    user = 'root',
+    password = 'admin'
+    database = 'personas_db'
+)
+
+4 - crear un cursor (objeto)
+cursor = personas_db.cursor()
+
+5 - Recuperar registros = cursor.fetchall()
+cursor.execute('SELECT * FROM personas');
+resultado = cursor.fetchall()
+
+6 - Cerrar los objetos de cursor y conexion con .close
