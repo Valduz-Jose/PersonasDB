@@ -14,3 +14,8 @@ resultado = cursor.fetchall()
 
 for persona in resultado:
     print(persona)
+
+# Cerrar la conexión a la base de datos
+cursor.close()
+# 
+personas_db.close()
